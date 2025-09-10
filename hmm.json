@@ -1,0 +1,85 @@
+{
+  "dependencies": [
+    {
+      "name": "hxcpp",
+      "type": "haxelib",
+      "version": "4.2.1"
+    },
+    {
+      "name": "lime",
+      "type": "haxelib",
+      "version": "7.9.0"
+    },
+    {
+      "name": "openfl",
+      "type": "haxelib",
+      "version": "9.2.1"
+    },
+    {
+      "name": "flixel",
+      "type": "haxelib",
+      "version": "5.3.1"
+    },
+    {
+      "name": "flixel-addons",
+      "type": "haxelib",
+      "version": "3.2.0"
+    },
+    {
+      "name": "flixel-tools",
+      "type": "haxelib",
+      "version": "1.5.1"
+    },
+    {
+      "name": "hxjsonast",
+      "type": "haxelib"
+    },
+    {
+      "name": "hxcpp-debug-server",
+      "type": "haxelib"
+    },
+    {
+      "name": "flixel-ui",
+      "type": "haxelib",
+      "version": "2.5.0"
+    },
+    {
+      "name": "hscript",
+      "type": "haxelib"
+    },
+    {
+      "name": "tjson",
+      "type": "haxelib"
+    },
+    {
+      "name": "discord_rpc",
+      "type": "git",
+      "ref": "master",
+      "url": "https://github.com/Aidan63/linc_discord-rpc"
+    },
+    {
+      "name": "hxCodec",
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/SPLCoding/hxCodec-but-it-works-xd"
+    },
+    {
+      "name": "extension-androidtools",
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/idkwhoiam381/extension-androidtools"
+    },
+    {
+      "name": "linc_luajit",
+      "type": "git",
+      "ref": "master",
+      "url": "https://github.com/nebulazorua/linc_luajit"
+    },
+    {
+      "name": "hxvlc",
+      "type": "haxelib",
+      "version": "1.8.1"
+    }
+    }
+  ]
+}
