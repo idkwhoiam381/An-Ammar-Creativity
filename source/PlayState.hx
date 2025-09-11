@@ -1649,11 +1649,11 @@ class PlayState extends MusicBeatState
 	{
 		if(generatedMusic)
 		{
-			if(vocals != null) vocals.pitch = value;
+			//if(vocals != null) vocals.pitch = value;
 			if (separateVocals && opponentVocals != null) {
-				opponentVocals.pitch = value;
+				//opponentVocals.pitch = value;
 			}
-			FlxG.sound.music.pitch = value;
+			//FlxG.sound.music.pitch = value;
 		}
 		playbackRate = value;
 		Conductor.safeZoneOffset = (ClientPrefs.safeFrames / 60) * 1000 * value;
@@ -2218,16 +2218,16 @@ class PlayState extends MusicBeatState
 			opponentVocals.pause();
 
 		FlxG.sound.music.time = time;
-		FlxG.sound.music.pitch = playbackRate;
+		//FlxG.sound.music.pitch = playbackRate;
 		FlxG.sound.music.play();
 
 		if (Conductor.songPosition <= vocals.length)
 		{
 			vocals.time = time;
-			vocals.pitch = playbackRate;
+			//vocals.pitch = playbackRate;
 			if (separateVocals) {
 				opponentVocals.time = time;
-				opponentVocals.pitch = playbackRate;
+				//opponentVocals.pitch = playbackRate;
 			}
 		}
 		vocals.play();
@@ -2265,7 +2265,7 @@ class PlayState extends MusicBeatState
 		}
 		FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song, hardInst ? '-hard' : ''), 1, false);
 		FlxG.sound.music.looped = false; 
-		FlxG.sound.music.pitch = playbackRate;
+		//FlxG.sound.music.pitch = playbackRate;
 		FlxG.sound.music.onComplete = finishSong.bind();
 		vocals.play();
 		if (separateVocals) 
@@ -2885,15 +2885,15 @@ class PlayState extends MusicBeatState
 		vocals.pause();
 
 		FlxG.sound.music.play();
-		FlxG.sound.music.pitch = playbackRate;
+		//FlxG.sound.music.pitch = playbackRate;
 		Conductor.songPosition = FlxG.sound.music.time;
 		if (Conductor.songPosition <= vocals.length)
 		{
 			vocals.time = Conductor.songPosition;
-			vocals.pitch = playbackRate;
+			//vocals.pitch = playbackRate;
 			if (separateVocals) {
 				opponentVocals.time = vocals.time;
-				opponentVocals.pitch = vocals.pitch;
+				//opponentVocals.pitch = vocals.pitch;
 			}
 		}
 		if (separateVocals) 
@@ -3164,7 +3164,7 @@ class PlayState extends MusicBeatState
 			if (!inCutscene) {
 				if(!cpuControlled) {
 					keyShit();
-				} else if(boyfriend.animation.curAnim != null && boyfriend.holdTimer > Conductor.stepCrochet * (0.0011 / FlxG.sound.music.pitch) * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss')) {
+				} else if(boyfriend.animation.curAnim != null && boyfriend.holdTimer > Conductor.stepCrochet * (0.0011 / FlxG.sound.music) * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss')) {
 					boyfriend.dance();
 					//boyfriend.animation.curAnim.finish();
 				}
@@ -4354,7 +4354,7 @@ class PlayState extends MusicBeatState
 				}
 				#end
 			}
-			else if (boyfriend.animation.curAnim != null && boyfriend.holdTimer > Conductor.stepCrochet * (0.0011 / FlxG.sound.music.pitch) * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
+			else if (boyfriend.animation.curAnim != null && boyfriend.holdTimer > Conductor.stepCrochet * (0.0011 / FlxG.sound.music) * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
 			{
 				boyfriend.dance();
 				//boyfriend.animation.curAnim.finish();
@@ -4746,7 +4746,7 @@ class PlayState extends MusicBeatState
 			FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 			FlxG.stage.removeEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
 		}
-		FlxG.sound.music.pitch = 1;
+		//FlxG.sound.music.pitch = 1;
 		super.destroy();
 	}
 
